@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('register/', user_views.register, name='register'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LoginView.as_view(), name='logout')
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LoginView.as_view(template_name='users/logout.html'), name='logout')
     #empty path means home page!
     #_dev works on all paths
 ]
