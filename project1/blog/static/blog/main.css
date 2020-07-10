@@ -82,3 +82,7 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+.account-img, img {
+  border: solid 1px white;
+  box-shadow: 1px 1px 3px gray;
+}
