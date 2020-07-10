@@ -126,3 +126,17 @@ LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 # CRISPY_TEMPLATE_PACK = 'boostrap4'
 
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+#/static/imagenes/img1.jpg
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static_pro", "static"),
+    #'/var/www/static/',
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "media",
+"static_root")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env",
+"media_root")
+
