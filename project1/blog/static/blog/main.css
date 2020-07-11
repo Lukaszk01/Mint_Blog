@@ -13,7 +13,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #CCF68D;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -34,14 +34,15 @@ ul {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  box-shadow: 1px 1px 4px gray;
 }
 
 .article-title {
-  color: #444444;
+  color: black;
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #77BC10;
   text-decoration: none;
 }
 
@@ -86,3 +87,22 @@ a.article-title:hover {
   border: solid 1px white;
   box-shadow: 1px 1px 3px gray;
 }
+a.navbar-brand {
+  font-family: 'Do Hyeon, sans-serif';
+  text-shadow: 0.4px 0.4px 0.4px gray;
+}
+a.navbar-brand:hover {
+  font-size: 24px;
+  padding: 0px;
+  transition: 0.3s;
+}
+a {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.site-header .navbar-nav .nav-link {
+  color: #454545;
+}
+a.mr-2 {
+  color: #77BC10;
+}
+
