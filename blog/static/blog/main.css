@@ -107,4 +107,6 @@ a {
 a.mr-2 {
   color: #77BC10;
 }
-
+body {
+  background-color: grey;
+}
