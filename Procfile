@@ -1,1 +1,2 @@
-reminder: python src/quickstart.py
+# reminder: python src/quickstart.py
+web: gunicorn project1.wsgi
