@@ -1,1 +1,7 @@
-reminder: python src/quickstart.py
+# web:gunicorn project1.wsgi
+
+
+
+web: gunicorn project1.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
