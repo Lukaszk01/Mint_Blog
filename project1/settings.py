@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
-
+# from base_settings.py import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'exhlfdat&vfum(-34*c2uroi(($ww(yo$9pv98=e6p^gl(-eoj'
-SECRET_KEY = os.environ.get('SECRET_KEY')
-
+SECRET_KEY = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project1.settings.local")
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY="81db2b293125c1ee38d3a20b0738c424b75ca681cbc9498b"
+# SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = True
 
 ALLOWED_HOSTS = ['mymintapp.herokuapp.com']
 
@@ -121,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-ALLOWED_HOSTS=['*',]
+# ALLOWED_HOSTS=['*',]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
@@ -141,13 +143,34 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+# AWS_STORAGE_BUCKET_NAME = 'name'
 
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+# SECURE_HSTS_SECONDS             = None
+# SECURE_SSL_REDIRECT             = True
+# SESSION_COOKIE_SECURE           = True
+# SECURE_REFERRER_POLICY          = True
+
+# CORS_REPLACE_HTTPS_REFERER      = True
+# HOST_SCHEME                     = "http://"
+# SECURE_PROXY_SSL_HEADER         = None
+
+
+# CSRF_COOKIE_SECURE              = True
+
+# SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+# SECURE_FRAME_DENY               = True
+
+
+
 
 django_heroku.settings(locals())
+
+
