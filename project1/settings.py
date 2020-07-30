@@ -25,7 +25,7 @@ SECRET_KEY="u'6_wl+60ae&0coepiftvs+cvaer^qcq#56tcm_wigwb&gumx*&o'"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://mymintapp.herokuapp.com']
+ALLOWED_HOSTS = ['http://mymintapp.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
