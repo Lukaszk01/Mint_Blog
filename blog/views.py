@@ -9,6 +9,7 @@ from django.views.generic import (
     DeleteView,
 )
 from .models import Post
+import requests
 
 
 def home(request):
