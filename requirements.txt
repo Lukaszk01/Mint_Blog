@@ -12,6 +12,7 @@ django-cors-headers==3.4.0
 django-crispy-forms==1.9.2
 django-gunicorn==0.1.1
 django-heroku==0.3.1
+django-on-heroku==1.0.1
 django-storages==1.9.1
 djangorestframework==3.11.1
 docutils==0.15.2
